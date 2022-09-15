@@ -1,3 +1,6 @@
+# turis-tere-projeto-integrado
+Projeto integrado da pós em engenharia de software na PUC 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
