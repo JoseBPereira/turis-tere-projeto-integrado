@@ -16,17 +16,7 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <div>
-      Nome
-      <input type="text" onChange={(e) => setNome(e.target.value)} />
-      Valor
-      <input type="number" onChange={(e) => setValor(e.target.value)} />
-      <button style={{ marginTop: 10 }} onClick={onClickCriar}>
-        Criar
-      </button>
-      <label>
-        {nome}
-        {valor}
-      </label>
+      <h1>Home</h1>
     </div>
   );
 }
