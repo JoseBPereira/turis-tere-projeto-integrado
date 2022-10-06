@@ -3,7 +3,7 @@ import { NextPageWithLayout } from "../_app";
 
 const PontosTuristicos: NextPageWithLayout = () => {
   return (
-    <h1>Teste</h1>
+    <h1>Pontos Turisticos</h1>
   );
 };
 
