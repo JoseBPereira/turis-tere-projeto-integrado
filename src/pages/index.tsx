@@ -1,24 +1,42 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { useState } from 'react';
+import { criarPontoTuristico } from '../services/db/pontos-turisticos';
+import { NextPageWithLayout } from './_app';
+import AppLayout from '../components/AppLayout';
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
+  const [nome, setNome] = useState("");
+  const [valor, setValor] = useState("");
+
+  const onClickCriar = () => {
+    if(nome && valor) {
+      const response = criarPontoTuristico(nome, parseFloat(valor));
+      console.log(response);
+    }
+  }
+
   return (
-    <div className={styles.container}>
-      <div className={styles.backgroundTransparency}>
-        <Head>
-          <title>TurisTere</title>
-        </Head>
-
-        <main className={styles.main}>
-          <h1>Main</h1>
-        </main>
-
-        <footer className={styles.footer}>Footer</footer>
-      </div>
+    <div>
+      Nome
+      <input type="text" onChange={(e) => setNome(e.target.value)} />
+      Valor
+      <input type="number" onChange={(e) => setValor(e.target.value)} />
+      <button style={{ marginTop: 10 }} onClick={onClickCriar}>
+        Criar
+      </button>
+      <label>
+        {nome}
+        {valor}
+      </label>
     </div>
   );
 }
+
+Home.getLayout = function getLayout(page) {
+  return (
+    <AppLayout>
+      {page}
+    </AppLayout>
+  );
+};
 
 export default Home

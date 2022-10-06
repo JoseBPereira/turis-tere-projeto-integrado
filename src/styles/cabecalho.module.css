@@ -1,0 +1,21 @@
+.menu {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: -20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
+    background-color: #4DCB8C;
+    width: 90%;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+
+.subMenu {
+    text-decoration: none;
+    margin-left: 40px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    cursor: pointer;
+}
