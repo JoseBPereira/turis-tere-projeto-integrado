@@ -11,10 +11,13 @@ import {
 
 const Cabecalho: NextPage = () => {
   const styleIcon = { verticalAlign: "text-bottom", filter: "drop-shadow(1px 1px 0.5px black)" };
-  return (
-    <div style={{ paddingTop: 10, paddingLeft: "3%", display: "flex" }}>
-      <Image src="/icone.svg" width={100} height={100} alt="logo" />
 
+  return (
+    <div style={{ paddingTop: 10, paddingLeft: "3%", display: "flex", paddingRight: "3%" }}>
+      <Link href={"/"}>
+        <Image src="/icone.svg" width={100} height={100} alt="logo" style={{ cursor: 'pointer' }}/>
+      </Link>
+      
       <div className={styles.menu}>
         <Link href={"/pontos-turisticos"}>
           <a className={styles.subMenu}>

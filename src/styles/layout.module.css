@@ -1,12 +1,11 @@
 .container {
   background-image: url('/Background.svg');
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 
 .backgroundTransparency {
-  background-color: rgba(0, 0, 0, 0.1);
-  height: inherit;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .main {

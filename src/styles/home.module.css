@@ -1,0 +1,25 @@
+.containerBody {
+  text-align: center;
+}
+
+.innerShadowTeresopolis {
+  background-color: #248352;
+  color: transparent;
+  text-shadow: 2px 2px 5px rgba(255,255,255,0.4);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+.containerText {
+  display: flex;
+  flex-direction: column;
+  font-family: "KoHo";
+  background-color: #41a673;
+  color: transparent;
+  text-shadow: 2px 2px 5px rgba(255,255,255,0.3);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  margin-top: 10px;
+}
