@@ -14,7 +14,7 @@ const Images: NextPage = () => {
 
   const shadowArrow = { filter: "drop-shadow(0px 0px 1px rgba(0,0,0, 0.3))"  };
 
-  const avancarImagem = () => {
+  const retrocederImagem = () => {
     let newImages = [];
     let lastIndex = images.length - 1;
 
@@ -22,11 +22,11 @@ const Images: NextPage = () => {
     for (let i = 0; i < lastIndex; i++) {
       newImages.push(images[i]);
     } 
-    
+
     setImages(newImages);
   }
 
-  const retrocederImagem = () => {
+  const avancarImagem = () => {
     let newImages = [];
     let lastIndex = images.length - 1;
 
@@ -66,6 +66,7 @@ const Images: NextPage = () => {
         alt="ImageCenter"
         style={{ zIndex: 1 }}
         hover={true}
+        class={styles.image}
       />
       <div
         style={{

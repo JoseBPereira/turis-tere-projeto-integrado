@@ -13,41 +13,30 @@ type SingleImageProps = {
 };
 
 const SingleImage: NextPage<SingleImageProps> = (props) => {
-    const [tamanho, setTamanho] = useState({
-        width: props.width,
-        height: props.height
-    });
-
-    const onHoverImage = () => {
-        if(!props.hover) return;
-        setTamanho({ width: tamanho.width * 1.2, height: tamanho.height * 1.15})
-    };
-
-    const onLeaveHoverImage = () => {
-        if (!props.hover) return;
-        setTamanho({
-            width: props.width,
-            height: props.height,
-        })
-    };
-
   return (
     <div
+      className={props.class}
       style={{
         backgroundColor: "black",
         padding: 3,
         borderRadius: 22,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: props.width,
+        height: props.height,
         ...props.style,
       }}
-      onMouseEnter={onHoverImage}
-      onMouseLeave={onLeaveHoverImage}
     >
       <Image
         src={props.url}
         alt={props.alt}
-        width={tamanho.width}
-        height={tamanho.height}
-        style={{ verticalAlign: "middle", borderRadius: 20 }}
+        width={props.width}
+        height={props.height}
+        style={{
+          verticalAlign: "middle",
+          borderRadius: 20,
+        }}
       ></Image>
     </div>
   );
