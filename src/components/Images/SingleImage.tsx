@@ -1,6 +1,5 @@
 import { NextPage } from "next";
 import Image from "next/future/image";
-import { useState } from "react";
 
 type SingleImageProps = {
   alt: string;
