@@ -60,7 +60,7 @@ const Detalhe: NextPageWithLayout = () => {
                 color={"#4DCB8C"}
               />
 
-              <span>
+              <span style={{margin: "auto"}}>
               {pontoTuristico.localizacao}
               </span>
             </div>
