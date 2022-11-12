@@ -5,9 +5,11 @@ import { useState } from "react";
 
 type ImagesProps = {
   arrayImages: string[];
+  width: number;
+  height: number;
 };
 
-const Images = ({ arrayImages } : ImagesProps) => {
+const Images = ({ arrayImages, width, height } : ImagesProps) => {
   const [images, setImages] = useState<string[]>(arrayImages);
 
   const shadowArrow = { filter: "drop-shadow(0px 0px 1px rgba(0,0,0, 0.3))" };
@@ -55,12 +57,17 @@ const Images = ({ arrayImages } : ImagesProps) => {
           marginRight: -40,
         }}
       >
-        <SingleImage url={images[0]} width={200} height={150} alt="ImageLeft" />
+        <SingleImage
+          url={images[0]}
+          width={width / 2}
+          height={height / 2}
+          alt="ImageLeft"
+        />
       </div>
       <SingleImage
         url={images[1]}
-        width={400}
-        height={300}
+        width={width}
+        height={height}
         alt="ImageCenter"
         style={{ zIndex: 1 }}
         hover={true}
@@ -72,12 +79,12 @@ const Images = ({ arrayImages } : ImagesProps) => {
           marginTop: "auto",
           marginBottom: "auto",
           marginLeft: -40,
-        }}  
+        }}
       >
         <SingleImage
           url={images[2]}
-          width={200}
-          height={150}
+          width={width / 2}
+          height={height / 2}
           alt="ImageRight"
         />
       </div>

@@ -68,7 +68,7 @@ const Detalhe: NextPageWithLayout = () => {
               <span>{pontoTuristico.descricao}</span>
             </div>
             <div className={styles.containerImages}>
-              <Images arrayImages={pontoTuristico.fotos}></Images>
+              <Images arrayImages={pontoTuristico.fotos} width={400} height={300}></Images>
             </div>
           </div>
         </div>
