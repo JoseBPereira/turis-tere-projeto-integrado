@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { KeyboardEventHandler, useState } from "react";
 import { MdSearch } from "react-icons/md";
 import styles from "../../styles/filtro.module.css";
 
@@ -8,6 +8,10 @@ type FiltroProps = {
 
 const Filtro = ({ filtrar } : FiltroProps) => {
   const [texto, setTexto] = useState("");
+
+  const onKeyUp = (event: { key: string; keyCode: number; }) => {
+    if (event.key === "Enter" || event.keyCode === 13) filtrar(texto);
+  }
 
   return (
     <div className={styles.container}>
@@ -20,6 +24,7 @@ const Filtro = ({ filtrar } : FiltroProps) => {
         className={styles.inputSearch}
         placeholder="Pesquisar ..."
         onInput={(e) => setTexto((e.target as HTMLInputElement).value)}
+        onKeyUp={onKeyUp}
       />
     </div>
   );

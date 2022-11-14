@@ -29,7 +29,6 @@ const SingleImage: NextPage<SingleImageProps> = (props) => {
     >
       <Image
         src={props.url}
-        blurDataURL={props.url}
         alt={props.alt}
         width={props.width}
         height={props.height}
@@ -37,7 +36,6 @@ const SingleImage: NextPage<SingleImageProps> = (props) => {
           verticalAlign: "middle",
           borderRadius: 20,
         }}
-        placeholder="blur"
       ></Image>
     </div>
   );

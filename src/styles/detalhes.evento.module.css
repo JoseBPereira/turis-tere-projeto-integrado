@@ -1,0 +1,69 @@
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid var(--primary);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin-top: 200px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.btnVoltar {
+  width: 80px;
+  border-radius: 7px;
+  border: none;
+  background-color: #4DCB8C;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 1px 1px 2px black;
+  cursor: pointer;
+}
+
+.containerImages {
+  margin-bottom: 40px;
+}
+
+.containerDescricao {
+  margin: 20px 50px;
+  white-space: pre-line;
+}
+
+.containerCabecalho {
+  margin: 25px 50px;
+  display: flex;
+}
+
+.containerNome {
+  width: 90%;
+}
+
+.txtNome {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.containerBody {
+  display: flex;
+  justify-content: center;
+  background: white;
+  box-shadow: 1px 1px 3px;
+  width: 100%;
+  margin-top: 15px;
+  flex-direction: column;
+}

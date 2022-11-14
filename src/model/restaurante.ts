@@ -1,9 +1,11 @@
+import { Avaliacao } from "./avaliacao";
+
 export type Restaurante = {
-  id: number;
+  id?: string;
   nome: string;
   descricao: string;
   localizacao: string;
-  avaliacoes: number[];
+  avaliacoes: Avaliacao[];
   preco: number;
   fotos: string[];
 };

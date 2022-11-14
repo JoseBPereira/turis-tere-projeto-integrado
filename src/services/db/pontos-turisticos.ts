@@ -36,7 +36,7 @@ export async function listarPontosTuristicos() : Promise<PontoTuristico[]> {
         return pontosTuristicos;
     }
     
-    return val;
+    return Promise.resolve([]);
 }
 
 export async function getPontoTuristico(id: string): Promise<PontoTuristico> {
@@ -48,5 +48,5 @@ export async function getPontoTuristico(id: string): Promise<PontoTuristico> {
     return val;
   }
 
-  return val;
+  return  Promise.reject(null);
 }

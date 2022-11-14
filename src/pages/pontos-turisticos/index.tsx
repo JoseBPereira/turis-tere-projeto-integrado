@@ -15,7 +15,9 @@ const PontosTuristicos: NextPageWithLayout<PontosTuristicosProps> = ({ pontosTur
   const [pontosTuristicosFiltrados, setPontosTuristicosFiltrados] = useState(pontosTuristicos);
 
   const filtrar = (texto: string) => {
-    let filtro = pontosTuristicos.filter(pontoTuristico => pontoTuristico.nome.includes(texto))
+    let filtro = pontosTuristicos.filter((pontoTuristico) =>
+      pontoTuristico.nome.toLowerCase().includes(texto.toLowerCase())
+    );
     setPontosTuristicosFiltrados(filtro);
   }
 
@@ -23,7 +25,7 @@ const PontosTuristicos: NextPageWithLayout<PontosTuristicosProps> = ({ pontosTur
     let cards = [];
     let length = pontosTuristicosFiltrados.length;
 
-    for (let i = 0; i < pontosTuristicosFiltrados.length; i += 4) {
+    for (let i = 0; i < length; i += 4) {
       cards.push(
         <div className={styles.containerCard} key={i}>
           <Card
