@@ -1,10 +1,10 @@
 import { useState } from "react";
 import AppLayout from "../../components/AppLayout";
 import Filtro from "../../components/Filtro";
-import { Restaurante, RestaurantesMock } from "../../model/restaurante";
+import { Restaurante } from "../../model/restaurante";
 import { NextPageWithLayout } from "../_app";
 import styles from "../../styles/restaurantes.module.css";
-import { criarRestaurante, listarRestaurantes } from "../../services/db/resturantes";
+import { listarRestaurantes } from "../../services/db/resturantes";
 import Card from "../../components/Restaurante/Card";
 
 type RestaurantesProps = {
@@ -15,9 +15,6 @@ const Restaurantes: NextPageWithLayout<RestaurantesProps> = ({ restaurantes }) =
   const [restaurantesFiltrados, setRestaurantesFiltrados] = useState(restaurantes);
 
   const filtrar = (texto: string) => {
-    //for(let i = 0; i < RestaurantesMock.length; i++) 
-      //criarRestaurante(RestaurantesMock[i]);
-      
     let filtro = restaurantes.filter((restaurante) =>
       restaurante.nome.toLowerCase().includes(texto.toLowerCase())
     );
